@@ -1,5 +1,6 @@
 "use client";
 
+import { Linkedin, Instagram, Facebook } from "lucide-react";
 import Link from "next/link";
 
 
@@ -75,6 +76,7 @@ export default function Footer() {
                 color: "#a7c5b0",
                 fontSize: "0.83rem",
                 lineHeight: 1.6,
+                marginBottom: "1.5rem",
               }}
             >
               School of Economics
@@ -83,6 +85,45 @@ export default function Footer() {
               <br />
               Islamabad, Pakistan
             </p>
+
+            {/* Social Buttons */}
+            <div style={{ display: "flex", gap: "0.75rem" }}>
+              {[
+                { icon: <Linkedin size={18} />, href: "#", title: "LinkedIn" },
+                { icon: <Instagram size={18} />, href: "#", title: "Instagram" },
+                { icon: <Facebook size={18} />, href: "#", title: "Facebook" },
+              ].map((social, i) => (
+                <a
+                  key={i}
+                  href={social.href}
+                  title={social.title}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "36px",
+                    height: "36px",
+                    backgroundColor: "#1a4731",
+                    color: "#86efac",
+                    textDecoration: "none",
+                    border: "1px solid #2d7a4f",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#2d7a4f";
+                    e.currentTarget.style.color = "#f8f9f5";
+                    e.currentTarget.style.borderColor = "#4caf50";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "#1a4731";
+                    e.currentTarget.style.color = "#86efac";
+                    e.currentTarget.style.borderColor = "#2d7a4f";
+                  }}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Column 2: Quick Links */}

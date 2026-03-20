@@ -46,6 +46,7 @@ export default function Header() {
         {/* Logo / Name */}
         <Link
           href="/"
+          className="logo-link"
           style={{ textDecoration: "none", display: "flex", flexDirection: "column", gap: "2px" }}
         >
           <span
@@ -73,28 +74,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav style={{ display: "flex", gap: "0rem" }} className="desktop-nav">
+        <nav style={{ display: "flex", gap: "0.5rem", alignItems: "center" }} className="desktop-nav">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              style={{
-                color: "#d1fae5",
-                textDecoration: "none",
-                fontSize: "0.85rem",
-                fontWeight: 500,
-                letterSpacing: "0.03em",
-                padding: "0.5rem 1.1rem",
-                display: "block",
-                position: "relative",
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color = "#4caf50";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color = "#d1fae5";
-              }}
+              className="nav-link"
             >
               {link.label}
             </a>
@@ -103,27 +88,7 @@ export default function Header() {
             href="https://scholar.google.com/citations?user=H1mlqIoAAAAJ&hl=en"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              marginLeft: "0.75rem",
-              backgroundColor: "#2d7a4f",
-              color: "#f8f9f5",
-              textDecoration: "none",
-              fontSize: "0.8rem",
-              fontWeight: 600,
-              letterSpacing: "0.04em",
-              padding: "0.5rem 1.2rem",
-              border: "1px solid #3a8f5f",
-              transition: "background-color 0.2s",
-              display: "flex",
-              alignItems: "center",
-              gap: "0.4rem",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#3a8f5f";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#2d7a4f";
-            }}
+            className="nav-link scholar-btn"
           >
             Google Scholar
           </a>
@@ -181,7 +146,7 @@ export default function Header() {
         <div
           style={{
             backgroundColor: "#0a1f14",
-            borderTop: "1px solid #2d7a4f",
+            borderTop: "3px solid #2d7a4f",
           }}
           className="mobile-menu"
         >
@@ -190,15 +155,7 @@ export default function Header() {
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              style={{
-                display: "block",
-                color: "#d1fae5",
-                textDecoration: "none",
-                padding: "0.85rem 2rem",
-                fontSize: "0.9rem",
-                fontWeight: 500,
-                borderBottom: "1px solid #1a4731",
-              }}
+              className="mobile-nav-link"
             >
               {link.label}
             </a>
@@ -207,14 +164,9 @@ export default function Header() {
             href="https://scholar.google.com/citations?user=H1mlqIoAAAAJ&hl=en"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: "block",
-              color: "#86efac",
-              textDecoration: "none",
-              padding: "0.85rem 2rem",
-              fontSize: "0.9rem",
-              fontWeight: 600,
-            }}
+            onClick={() => setMenuOpen(false)}
+            className="mobile-nav-link"
+            style={{ color: "#86efac" }}
           >
             Google Scholar
           </a>
@@ -222,6 +174,57 @@ export default function Header() {
       )}
 
       <style>{`
+        .nav-link {
+          color: #d1fae5;
+          text-decoration: none;
+          font-size: 0.85rem;
+          font-weight: 500;
+          letter-spacing: 0.03em;
+          padding: 0.75rem 1.25rem; /* Larger square-box padding */
+          display: inline-block;
+          transition: all 0.2s ease;
+          border: 1px solid transparent;
+          border-radius: 0; /* Square box */
+        }
+        .nav-link:hover {
+          background-color: #2d7a4f;
+          color: #f8f9f5;
+          border-color: #3a8f5f;
+        }
+        .logo-link {
+          padding: 0.5rem 0.8rem;
+          margin-left: -0.8rem; /* Offset padding to keep text aligned left */
+          transition: all 0.2s ease;
+          border: 1px solid transparent;
+        }
+        .logo-link:hover {
+          background-color: #2d7a4f;
+          border-color: #3a8f5f;
+        }
+        .scholar-btn {
+          margin-left: 0.5rem;
+          background-color: #2d7a4f;
+          color: #f8f9f5;
+          border: 1px solid #3a8f5f;
+          font-weight: 600;
+        }
+        .scholar-btn:hover {
+          background-color: #3a8f5f;
+          border-color: #4caf50;
+        }
+        .mobile-nav-link {
+          display: block;
+          color: #d1fae5;
+          text-decoration: none;
+          padding: 1.2rem 2rem;
+          font-size: 0.95rem;
+          font-weight: 500;
+          border-bottom: 1px solid #1a4731;
+          transition: background-color 0.2s;
+        }
+        .mobile-nav-link:hover {
+          background-color: #1a4731;
+        }
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: flex !important; }

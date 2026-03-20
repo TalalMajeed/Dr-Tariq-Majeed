@@ -863,155 +863,173 @@ export default function Home() {
         }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+          <div style={{ marginBottom: "3rem" }}>
+            <div
+              style={{
+                width: "32px",
+                height: "3px",
+                backgroundColor: "#4caf50",
+                marginBottom: "1rem",
+              }}
+            />
+            <span
+              style={{
+                fontSize: "0.72rem",
+                fontWeight: 700,
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "#2d7a4f",
+              }}
+            >
+              Contact
+            </span>
+            <h2
+              style={{
+                fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                fontWeight: 700,
+                color: "#111827",
+                lineHeight: 1.2,
+                letterSpacing: "-0.02em",
+                marginTop: "0.75rem",
+              }}
+            >
+              Connect & Collaborate
+            </h2>
+          </div>
+
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "200px 1fr",
-              gap: "5rem",
-              alignItems: "start",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: "1px",
+              backgroundColor: "#d1d5db",
+              marginBottom: "2.5rem",
+              border: "1px solid #d1d5db",
             }}
-            className="responsive-grid-about"
           >
-            {/* Left label */}
-            <div>
-              <div
+            <div style={{ backgroundColor: "#f8f9f5", padding: "2rem" }}>
+              <p
                 style={{
-                  width: "32px",
-                  height: "3px",
-                  backgroundColor: "#4caf50",
+                  color: "#2d7a4f",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
                   marginBottom: "1rem",
                 }}
-              />
-              <span
-                style={{
-                  fontSize: "0.72rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.15em",
-                  textTransform: "uppercase",
-                  color: "#2d7a4f",
-                }}
               >
-                Contact
-              </span>
-            </div>
-
-            {/* Content */}
-            <div>
-              <h2
-                style={{
-                  fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                  fontWeight: 700,
-                  color: "#111827",
-                  lineHeight: 1.2,
-                  letterSpacing: "-0.02em",
-                  marginBottom: "2.5rem",
-                }}
-              >
-                Connect & Collaborate
-              </h2>
-
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-                  gap: "1px",
-                  backgroundColor: "#d1d5db",
-                  marginBottom: "2rem",
-                }}
-              >
-                <div style={{ backgroundColor: "#f8f9f5", padding: "1.75rem" }}>
-                  <p
-                    style={{
-                      color: "#2d7a4f",
-                      fontSize: "0.7rem",
-                      fontWeight: 700,
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase",
-                      marginBottom: "0.75rem",
-                    }}
-                  >
-                    Institution
-                  </p>
-                  <p style={{ color: "#374151", fontSize: "0.9rem", lineHeight: 1.7 }}>
-                    School of Economics
-                    <br />
-                    Quaid-i-Azam University
-                    <br />
-                    Islamabad, Pakistan
-                  </p>
-                </div>
-
-                <div style={{ backgroundColor: "#f8f9f5", padding: "1.75rem" }}>
-                  <p
-                    style={{
-                      color: "#2d7a4f",
-                      fontSize: "0.7rem",
-                      fontWeight: 700,
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase",
-                      marginBottom: "0.75rem",
-                    }}
-                  >
-                    Academic Profile
-                  </p>
-                  <a
-                    href="https://scholar.google.com/citations?user=H1mlqIoAAAAJ&hl=en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      color: "#2d7a4f",
-                      fontSize: "0.88rem",
-                      fontWeight: 600,
-                      textDecoration: "none",
-                      borderBottom: "2px solid #4caf50",
-                      paddingBottom: "2px",
-                    }}
-                  >
-                    Google Scholar Profile
+                Direct Contact
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <div>
+                  <p style={{ color: "#6b7280", fontSize: "0.75rem", marginBottom: "0.25rem" }}>Email</p>
+                  <a href="mailto:tariq@qau.edu.pk" style={{ color: "#111827", textDecoration: "none", fontWeight: 600, fontSize: "0.95rem" }}>
+                    tariq@qau.edu.pk
                   </a>
-                  <p style={{ color: "#6b7280", fontSize: "0.8rem", marginTop: "0.5rem" }}>
-                    8,300+ citations · h-index 54
-                  </p>
                 </div>
-
-                <div style={{ backgroundColor: "#f8f9f5", padding: "1.75rem" }}>
-                  <p
-                    style={{
-                      color: "#2d7a4f",
-                      fontSize: "0.7rem",
-                      fontWeight: 700,
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase",
-                      marginBottom: "0.75rem",
-                    }}
-                  >
-                    Expertise For
-                  </p>
-                  <ul
-                    style={{
-                      color: "#374151",
-                      fontSize: "0.85rem",
-                      lineHeight: 2,
-                      listStyle: "none",
-                      padding: 0,
-                      margin: 0,
-                    }}
-                  >
-                    <li>Research Supervision</li>
-                    <li>Capacity-Building Workshops</li>
-                    <li>Keynote Addresses</li>
-                    <li>Research Consultancy</li>
-                  </ul>
+                <div>
+                  <p style={{ color: "#6b7280", fontSize: "0.75rem", marginBottom: "0.25rem" }}>Mobile</p>
+                  <a href="tel:+923335206384" style={{ color: "#111827", textDecoration: "none", fontWeight: 600, fontSize: "0.95rem" }}>
+                    +92 333 5206384
+                  </a>
                 </div>
               </div>
+            </div>
 
-              <p style={{ color: "#6b7280", fontSize: "0.83rem", lineHeight: 1.7 }}>
-                Dr. Majeed is available for research collaboration, academic keynote addresses,
-                capacity-building training in applied social sciences, and research consultancy
-                engagements.
+            <div style={{ backgroundColor: "#f8f9f5", padding: "2rem" }}>
+              <p
+                style={{
+                  color: "#2d7a4f",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  marginBottom: "1rem",
+                }}
+              >
+                Institution
+              </p>
+              <p style={{ color: "#111827", fontSize: "0.95rem", fontWeight: 500, lineHeight: 1.6 }}>
+                School of Economics
+                <br />
+                Quaid-i-Azam University
+                <br />
+                Islamabad, Pakistan
               </p>
             </div>
+
+            <div style={{ backgroundColor: "#f8f9f5", padding: "2rem" }}>
+              <p
+                style={{
+                  color: "#2d7a4f",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  marginBottom: "1rem",
+                }}
+              >
+                Academic Profile
+              </p>
+              <a
+                href="https://scholar.google.com/citations?user=H1mlqIoAAAAJ&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#2d7a4f",
+                  fontSize: "1rem",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                  borderBottom: "2px solid #4caf50",
+                  paddingBottom: "2px",
+                  display: "inline-block",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                Google Scholar Profile
+              </a>
+              <p style={{ color: "#6b7280", fontSize: "0.85rem" }}>
+                8,300+ Citations · h-index 54
+                <br />
+                Stanford Top 2% (2021-2025)
+              </p>
+            </div>
+
+            <div style={{ backgroundColor: "#f8f9f5", padding: "2rem" }}>
+              <p
+                style={{
+                  color: "#2d7a4f",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  marginBottom: "1rem",
+                }}
+              >
+                Expertise For
+              </p>
+              <ul
+                style={{
+                  color: "#374151",
+                  fontSize: "0.9rem",
+                  lineHeight: 1.8,
+                  listStyle: "none",
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                <li>• Research Supervision</li>
+                <li>• Capacity-Building Workshops</li>
+                <li>• Keynote Addresses & Consultancy</li>
+              </ul>
+            </div>
           </div>
+
+          <p style={{ color: "#6b7280", fontSize: "0.88rem", lineHeight: 1.8, maxWidth: "800px" }}>
+            Dr. Majeed is available for international research collaboration, academic keynote addresses,
+            capacity-building training in applied social sciences, and high-level research consultancy
+            engagements.
+          </p>
         </div>
       </section>
     </div>
