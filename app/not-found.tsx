@@ -24,10 +24,10 @@ export default function NotFound() {
           right: 0,
           bottom: 0,
           backgroundImage: `
-            linear-gradient(to right, rgba(76, 175, 80, 0.05) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(76, 175, 80, 0.05) 1px, transparent 1px)
+            linear-gradient(to right, rgba(22, 163, 74, 0.06) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(22, 163, 74, 0.06) 1px, transparent 1px)
           `,
-          backgroundSize: "40px 40px",
+          backgroundSize: "60px 60px",
           maskImage: "radial-gradient(ellipse at center, black 20%, transparent 80%)",
           WebkitMaskImage: "radial-gradient(ellipse at center, black 20%, transparent 80%)",
         }}
@@ -46,7 +46,7 @@ export default function NotFound() {
           style={{
             fontSize: "clamp(5rem, 15vw, 10rem)",
             fontWeight: 800,
-            color: "#3a8f5f",
+            color: "#166534",
             margin: 0,
             lineHeight: 0.9,
             letterSpacing: "-0.05em",
@@ -57,7 +57,7 @@ export default function NotFound() {
         <h2
           style={{
             fontSize: "1.25rem",
-            color: "#4caf50",
+            color: "#2d7a4f",
             fontWeight: 600,
             marginTop: "1.5rem",
             letterSpacing: "0.05em",
@@ -77,20 +77,20 @@ export default function NotFound() {
         >
           The page you are looking for has been excluded from the current sample. Please return to the primary dataset.
         </p>
-        
+
         <Link
           href="/"
           style={{
             display: "inline-block",
-            backgroundColor: "#4caf50",
+            backgroundColor: "#166534",
             color: "#ffffff",
             padding: "0.85rem 2rem",
             textDecoration: "none",
-            fontWeight: 600,
+            fontWeight: 700,
             fontSize: "0.85rem",
-            letterSpacing: "0.05em",
+            letterSpacing: "0.04em",
             textTransform: "uppercase",
-            border: "2px solid #4caf50",
+            border: "2px solid #166534",
             transition: "all 0.2s ease",
           }}
           className="home-btn"
@@ -101,9 +101,8 @@ export default function NotFound() {
 
       <style>{`
         .home-btn:hover {
-          background-color: transparent !important;
-          color: #4caf50 !important;
-          border-color: #4caf50 !important;
+          background-color: #14532d !important;
+          border-color: #14532d !important;
         }
       `}</style>
     </main>
