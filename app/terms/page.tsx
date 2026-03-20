@@ -53,17 +53,7 @@ export default function TermsOfUse() {
   return (
     <main style={{ fontFamily: "'Inter', sans-serif", backgroundColor: "#ffffff", minHeight: "100vh" }}>
 
-      {/* Header bar */}
-      <div style={{ backgroundColor: "#0f2d1f", borderBottom: "1px solid #2d7a4f" }}>
-        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "1rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <Link href="/" style={{ color: "#86efac", textDecoration: "none", fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase" }}>
-            ← Back to Homepage
-          </Link>
-          <span style={{ color: "#2d7a4f", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600 }}>
-            Dr. Muhammad Tariq Majeed
-          </span>
-        </div>
-      </div>
+
 
       {/* Hero */}
       <div style={{ backgroundColor: "#f8f9f5", borderBottom: "1px solid #e5e7eb", padding: "4rem 2rem 3rem" }}>
@@ -106,22 +96,7 @@ export default function TermsOfUse() {
         </div>
       </div>
 
-      {/* Footer strip */}
-      <div style={{ backgroundColor: "#0f2d1f", borderTop: "1px solid #2d7a4f", padding: "1.5rem 2rem" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
-          <p style={{ color: "#6b7280", fontSize: "0.78rem" }}>
-            © {new Date().getFullYear()} Dr. Muhammad Tariq Majeed. All rights reserved.
-          </p>
-          <div style={{ display: "flex", gap: "1.5rem" }}>
-            <Link href="/privacy" style={{ color: "#86efac", textDecoration: "none", fontSize: "0.78rem" }}>
-              Privacy Policy
-            </Link>
-            <Link href="/" style={{ color: "#86efac", textDecoration: "none", fontSize: "0.78rem" }}>
-              Homepage
-            </Link>
-          </div>
-        </div>
-      </div>
+
 
     </main>
   );
