@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --green-darkest: #0a1f14;
+  --green-dark: #0f2d1f;
+  --green-primary: #1a4731;
+  --green-medium: #2d7a4f;
+  --green-accent: #3a8f5f;
+  --green-bright: #4caf50;
+  --green-light: #86efac;
+  --green-pale: #dcfce7;
+  --bg-main: #f8f9f5;
+  --bg-section: #f0f4ef;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  --border-color: #d1d5db;
+  --border-green: #2d7a4f;
 }
 
 @theme inline {
@@ -10,8 +25,52 @@
   --font-mono: var(--font-geist-mono);
 }
 
+* {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accent underline utility */
+.accent-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.accent-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--green-bright);
+}
+
+/* Section label utility */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green-medium);
+}
+
+/* Divider */
+.section-divider {
+  width: 40px;
+  height: 3px;
+  background: var(--green-bright);
+  margin: 0.75rem 0;
 }
