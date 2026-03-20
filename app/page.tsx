@@ -705,7 +705,7 @@ export default function Home() {
                     org: "Allama Iqbal Open University",
                     detail: "Economics",
                   },
-                ].map((item, i, arr) => (
+                ].map((item, i) => (
                   <div
                     key={i}
                     style={{
