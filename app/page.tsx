@@ -38,6 +38,7 @@ export default function Home() {
         >
           {/* Stanford badge */}
           <div
+            className="hero-badge"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -139,7 +140,7 @@ export default function Home() {
 
 
           {/* CTA buttons */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+          <div className="hero-cta-buttons">
             <a
               href="#publications"
               style={{
@@ -152,7 +153,9 @@ export default function Home() {
                 letterSpacing: "0.04em",
                 textTransform: "uppercase",
                 transition: "background-color 0.2s",
-                display: "inline-block",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
               onMouseEnter={(e) =>
                 ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#14532d")
@@ -178,7 +181,9 @@ export default function Home() {
                 textTransform: "uppercase",
                 border: "2px solid #166534",
                 transition: "border-color 0.2s, background-color 0.2s",
-                display: "inline-block",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
@@ -209,10 +214,6 @@ export default function Home() {
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "200px 1fr",
-            gap: "5rem",
-            alignItems: "start",
           }}
           className="responsive-grid-about"
         >
@@ -251,9 +252,7 @@ export default function Home() {
                 marginBottom: "2rem",
               }}
             >
-              Professor of Economics, Researcher,
-              <br />
-              and Thought Leader
+              Professor of Economics, Researcher, and Thought Leader
             </h2>
 
             <p

@@ -74,3 +74,41 @@ html {
   background: var(--green-bright);
   margin: 0.75rem 0;
 }
+
+/* About section responsive grid */
+.responsive-grid-about {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .responsive-grid-about {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Hero CTA buttons */
+.hero-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero-cta-buttons {
+    flex-direction: column;
+  }
+
+  .hero-cta-buttons a {
+    width: 100%;
+  }
+
+  .hero-badge {
+    display: flex !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
