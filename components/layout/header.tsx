@@ -139,40 +139,38 @@ export default function Header() {
             cursor: "pointer",
             display: "none",
             flexDirection: "column",
-            gap: "5px",
-            padding: "4px",
+            gap: "6px",
+            padding: "8px",
+            zIndex: 100,
           }}
           aria-label="Toggle navigation menu"
           id="mobile-menu-btn"
         >
-          <span
+          <div
             style={{
-              display: "block",
               width: "24px",
               height: "2px",
               backgroundColor: "#f8f9f5",
-              transition: "transform 0.2s",
-              transform: menuOpen ? "rotate(45deg) translate(5px, 5px)" : "none",
+              transition: "transform 0.3s ease, margin 0.3s ease",
+              transform: menuOpen ? "translateY(8px) rotate(45deg)" : "none",
             }}
           />
-          <span
+          <div
             style={{
-              display: "block",
               width: "24px",
               height: "2px",
               backgroundColor: "#f8f9f5",
-              transition: "opacity 0.2s",
+              transition: "opacity 0.2s ease",
               opacity: menuOpen ? 0 : 1,
             }}
           />
-          <span
+          <div
             style={{
-              display: "block",
               width: "24px",
               height: "2px",
               backgroundColor: "#f8f9f5",
-              transition: "transform 0.2s",
-              transform: menuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none",
+              transition: "transform 0.3s ease, margin 0.3s ease",
+              transform: menuOpen ? "translateY(-8px) rotate(-45deg)" : "none",
             }}
           />
         </button>

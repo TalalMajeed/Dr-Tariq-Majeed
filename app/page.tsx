@@ -7,7 +7,7 @@ export default function Home() {
       <section
         id="home"
         style={{
-          backgroundColor: "#0f2d1f",
+          backgroundColor: "#ffffff",
           minHeight: "100vh",
           display: "flex",
           alignItems: "center",
@@ -15,13 +15,13 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
-        {/* Background grid texture */}
+        {/* Background grid texture - more visible for white background */}
         <div
           style={{
             position: "absolute",
             inset: 0,
             backgroundImage:
-              "linear-gradient(rgba(45,122,79,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(45,122,79,0.07) 1px, transparent 1px)",
+              "linear-gradient(rgba(22,163,74,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(22,163,74,0.06) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
             pointerEvents: "none",
           }}
@@ -31,10 +31,10 @@ export default function Home() {
           style={{
             maxWidth: "1280px",
             margin: "0 auto",
-            padding: "6rem 2rem 6rem 4rem",
             position: "relative",
             width: "100%",
           }}
+          className="px-6 py-16 md:px-16 md:py-24"
         >
           {/* Stanford badge */}
           <div
@@ -42,8 +42,8 @@ export default function Home() {
               display: "inline-flex",
               alignItems: "center",
               gap: "0.5rem",
-              backgroundColor: "rgba(74,175,80,0.12)",
-              border: "1px solid #2d7a4f",
+              backgroundColor: "#f0fdf4",
+              border: "1px solid #16a34a",
               padding: "0.4rem 1rem",
               marginBottom: "2rem",
             }}
@@ -52,25 +52,25 @@ export default function Home() {
               style={{
                 width: "6px",
                 height: "6px",
-                backgroundColor: "#4caf50",
+                backgroundColor: "#16a34a",
               }}
             />
             <span
               style={{
-                color: "#86efac",
+                color: "#166534",
                 fontSize: "0.72rem",
                 fontWeight: 600,
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
               }}
             >
-              Stanford Top 2% World Scientists — 2021, 2022, 2023, 2024, 2025
+              Stanford Top 2% World Scientists <span className="hidden sm:inline">— 2021-2025</span>
             </span>
           </div>
 
           <h1
             style={{
-              color: "#f8f9f5",
+              color: "#111827",
               fontSize: "clamp(2.2rem, 5vw, 4rem)",
               fontWeight: 800,
               lineHeight: 1.1,
@@ -81,12 +81,12 @@ export default function Home() {
           >
             Dr. Muhammad
             <br />
-            <span style={{ color: "#4caf50" }}>Tariq Majeed</span>
+            <span style={{ color: "#166534" }}>Tariq Majeed</span>
           </h1>
 
           <p
             style={{
-              color: "#86efac",
+              color: "#065f46",
               fontSize: "1.05rem",
               fontWeight: 500,
               letterSpacing: "0.04em",
@@ -98,86 +98,53 @@ export default function Home() {
           </p>
           <p
             style={{
-              color: "#a7c5b0",
+              color: "#374151",
               fontSize: "0.9rem",
               marginBottom: "2.5rem",
             }}
           >
-            School of Economics · Quaid-i-Azam University, Islamabad, Pakistan
+            School of Economics · Quaid-i-Azam University, Islamabad
           </p>
 
           <p
             style={{
-              color: "#c8dcd0",
+              color: "#4b5563",
               fontSize: "1rem",
               lineHeight: 1.8,
               maxWidth: "640px",
               marginBottom: "3rem",
             }}
+            className="hidden md:block"
           >
             Ph.D. in Economics from the University of Glasgow. Researcher in Development,
             International, Environmental, Islamic, and Financial Economics with over 15 years of
             academic and research experience.
           </p>
 
-          {/* Inline stat chips */}
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "1px",
-              marginBottom: "3rem",
-              backgroundColor: "#2d7a4f",
-            }}
-          >
-            {[
-              { num: "8,300+", label: "Citations" },
-              { num: "54", label: "h-index" },
-              { num: "144", label: "i10-index" },
-              { num: "10", label: "Ph.D. Supervised" },
-            ].map((s) => (
-              <div
-                key={s.label}
-                style={{
-                  backgroundColor: "#0f2d1f",
-                  padding: "1rem 2rem",
-                  textAlign: "center",
-                  flex: "1 1 120px",
-                }}
-              >
-                <div
-                  style={{
-                    color: "#4caf50",
-                    fontSize: "1.6rem",
-                    fontWeight: 800,
-                    lineHeight: 1,
-                    marginBottom: "0.3rem",
-                  }}
-                >
-                  {s.num}
-                </div>
-                <div
-                  style={{
-                    color: "#a7c5b0",
-                    fontSize: "0.72rem",
-                    fontWeight: 500,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  {s.label}
-                </div>
-              </div>
-            ))}
+          {/* Compact intro for mobile */}
+          <div className="md:hidden">
+            <p
+              style={{
+                color: "#4b5563",
+                fontSize: "0.95rem",
+                lineHeight: 1.7,
+                maxWidth: "640px",
+                marginBottom: "2.5rem",
+              }}
+            >
+              Ph.D. from the University of Glasgow. Leading researcher in Development and 
+              Environmental Economics with 15+ years of experience.
+            </p>
           </div>
+
 
           {/* CTA buttons */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             <a
               href="#publications"
               style={{
-                backgroundColor: "#4caf50",
-                color: "#0a1f14",
+                backgroundColor: "#166534",
+                color: "#ffffff",
                 textDecoration: "none",
                 padding: "0.85rem 2rem",
                 fontWeight: 700,
@@ -188,13 +155,13 @@ export default function Home() {
                 display: "inline-block",
               }}
               onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#3a8f5f")
+                ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#14532d")
               }
               onMouseLeave={(e) =>
-                ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#4caf50")
+                ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#166534")
               }
             >
-              View Publications
+              View Research
             </a>
             <a
               href="https://scholar.google.com/citations?user=H1mlqIoAAAAJ&hl=en"
@@ -202,26 +169,26 @@ export default function Home() {
               rel="noopener noreferrer"
               style={{
                 backgroundColor: "transparent",
-                color: "#86efac",
+                color: "#166534",
                 textDecoration: "none",
                 padding: "0.85rem 2rem",
                 fontWeight: 600,
                 fontSize: "0.85rem",
                 letterSpacing: "0.04em",
                 textTransform: "uppercase",
-                border: "1px solid #2d7a4f",
-                transition: "border-color 0.2s, color 0.2s",
+                border: "2px solid #166534",
+                transition: "border-color 0.2s, background-color 0.2s",
                 display: "inline-block",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
-                el.style.borderColor = "#4caf50";
-                el.style.color = "#4caf50";
+                el.style.borderColor = "#14532d";
+                el.style.backgroundColor = "#f0fdf4";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLAnchorElement;
-                el.style.borderColor = "#2d7a4f";
-                el.style.color = "#86efac";
+                el.style.borderColor = "#166534";
+                el.style.backgroundColor = "transparent";
               }}
             >
               Google Scholar
@@ -1047,15 +1014,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <style>{`
-        @media (max-width: 768px) {
-          .responsive-grid-about {
-            grid-template-columns: 1fr !important;
-            gap: 1.5rem !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }
